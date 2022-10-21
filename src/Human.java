@@ -1,32 +1,66 @@
+import java.time.LocalDate;
+
 public class Human {
-    int yearOfBirth;
+    private int yearOfBirth;
     String name;
-    String city;
+    private String city;
     String job;
 
 
-
-Human(int yearOfBirth,String name,String city,String job){
-    this.yearOfBirth=2022-yearOfBirth;
-    this.name=name;
-    this.city=city;
-    this.job=job;
-}
-Human(int yearOfBirth){
-    this.yearOfBirth=yearOfBirth;
-    if (yearOfBirth>=0) {
-        this.yearOfBirth = yearOfBirth;
-    }else {
-        this.yearOfBirth=0;
+    Human(int age, String name, String city, String job) {
+        if(yearOfBirth>=0) {
+            this.yearOfBirth = LocalDate.now().getYear() - age;
+        }else {
+            this.yearOfBirth=0;
+        }
+        this.name = name;
+        this.city = city;
+        this.job = job;
     }
-    name="Информация не указана";
-    city="Информация не указана";
-    job="Информация не указана";
+
+    Human(int age) {
+
+        if (yearOfBirth >= 0 ) {
+            this.yearOfBirth = LocalDate.now().getYear() - age;
+        } else {
+            this.yearOfBirth = 0;
+        }
+        name = "Информация не указана";
+        city = "Информация не указана";
+        job = "Информация не указана";
+    }
+
+    void speaks() {
+        System.out.println("Привет! Меня зовут " + name + ". Я из города " + city + ". Я родился в " + yearOfBirth + " году. Я работаю на должности " + job + ". Будем знакомы!");
+    }
+
+    public int getYear(int age) {
+        return LocalDate.now().getYear() - age;
+    }
+
+
+    public void setYearOfBirth(int age) {
+        this.yearOfBirth = LocalDate.now().getYear() - age;
+       if (yearOfBirth>=0 ) {
+           this.yearOfBirth = yearOfBirth;
+        }else  {
+           System.out.println("Информация не указана");
+       }
+        }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        if (city != null && !city.isEmpty() ) {
+            this.city = city;
+        }else {
+            this.city="Информация не указана";
+        }
+    }
 }
-void speaks(){
-    System.out.println("Привет! Меня зовут "+name+". Я из города "+ city+". Я родился в "+yearOfBirth+" году. Я работаю на должности "+job+". Будем знакомы!");
-}
-}
+
 
 
 

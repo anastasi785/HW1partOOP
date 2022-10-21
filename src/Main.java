@@ -6,8 +6,18 @@ public class Main {
         anya.speaks();
         Human kat=new Human(28,"Катя","Калининград","продакт-менеджер");
         kat.speaks();
-        Human artem=new Human(-27);
+        Human artem=new Human(27);
         artem.speaks();
+        Human vova=new Human(2056,"Владимир","Казань","не работает");
+        vova.speaks();
+
+        kat.setYearOfBirth(2023);
+       kat.speaks();
+
+
+
+
+
 
         Car lada=new Car(1.6, "желтый",2015);
         lada.information();
