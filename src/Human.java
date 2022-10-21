@@ -34,13 +34,16 @@ public class Human {
         System.out.println("Привет! Меня зовут " + name + ". Я из города " + city + ". Я родился в " + yearOfBirth + " году. Я работаю на должности " + job + ". Будем знакомы!");
     }
 
-    public int getYear(int age) {
-        return LocalDate.now().getYear() - age;
+    public int getYear() {
+        return LocalDate.now().getYear() -yearOfBirth;
     }
 
+    public int getYearOfBirth() {
+        return yearOfBirth=yearOfBirth;
+    }
 
-    public void setYearOfBirth(int age) {
-        this.yearOfBirth = LocalDate.now().getYear() - age;
+    public void setYearOfBirth(int yearOfBirth) {
+
        if (yearOfBirth>=0 ) {
            this.yearOfBirth = yearOfBirth;
         }else  {

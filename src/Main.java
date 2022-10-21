@@ -9,9 +9,11 @@ public class Main {
         Human artem=new Human(27);
         artem.speaks();
         Human vova=new Human(2056,"Владимир","Казань","не работает");
+        System.out.println(vova.getYearOfBirth());
         vova.speaks();
 
-        kat.setYearOfBirth(2023);
+
+       kat.setYearOfBirth(1995);
        kat.speaks();
 
 
