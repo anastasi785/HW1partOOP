@@ -47,7 +47,7 @@ public class Human {
        if (yearOfBirth>=0 ) {
            this.yearOfBirth = yearOfBirth;
         }else  {
-           System.out.println("Информация не указана");
+           this.yearOfBirth=0;
        }
         }
 
